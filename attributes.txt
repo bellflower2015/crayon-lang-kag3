@@ -28,6 +28,7 @@ clipleft
 cliptop
 clipwidth
 color
+cond
 countpage
 default
 delay
