@@ -1,0 +1,15 @@
+### KAG3 LANGUAGE ###
+
+#   ELEMENT_NAME [optional-css-class] REGULAR_EXPRESSION
+
+    NAME            KAG3
+    VERSION         1.0.0
+
+    COMMENT         (^;.*?$)
+    STRING          ((?<![^\\]\\)".*?(?<![^\\]\\)")
+    TAG             ^\@|\[(?!\[)|\]
+    PREPROCESSOR    (^\*.*?$)
+    RESERVED        \b(?<!=)(?alt:command.txt)\b
+    ENTITY          \b(?<!=)(?alt:attributes.txt)(?==)*\b
+    VARIABLE        (?<=)(\b(?alt:reserved.txt)|0x[\dA-Fa-f]{6}|message\d*|\&[a-z_][\w\.]*)\b
+
